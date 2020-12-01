@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Movie_store_API.Data;
+using Movie_store_API.Mappings;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -43,6 +45,9 @@ namespace Movie_store_API
                 .AllowAnyHeader());
             });
 
+            services.AddAutoMapper(typeof(Maps));
+
+
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("V1", new OpenApiInfo { Title = "Movie Store API", Version = "V1",
@@ -53,6 +58,7 @@ namespace Movie_store_API
                 options.IncludeXmlComments(xPath);
             });
 
+            
             services.AddControllers();
         }
 

@@ -12,5 +12,9 @@ namespace Movie_store_API.Data
             : base(options)
         {
         }
+
+        public DbSet<Actor> Actors { get; set; }
+
+        public DbSet<Movie> Movies { get; set; }
     }
 }
