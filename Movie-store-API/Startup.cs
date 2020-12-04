@@ -9,8 +9,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Movie_store_API.Contracts;
 using Movie_store_API.Data;
 using Movie_store_API.Mappings;
+using Movie_store_API.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -46,6 +48,8 @@ namespace Movie_store_API
             });
 
             services.AddAutoMapper(typeof(Maps));
+            services.AddScoped<IActorRepository, ActorRepository>();
+            services.AddScoped<IMovieRepository, MovieRepository>();
 
 
             services.AddSwaggerGen(options =>

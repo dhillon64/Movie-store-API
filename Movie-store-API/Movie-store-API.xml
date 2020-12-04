@@ -4,5 +4,35 @@
         <name>Movie-store-API</name>
     </assembly>
     <members>
+        <member name="T:Movie_store_API.Controllers.ActorsController">
+            <summary>
+            EndPoint used to interact with the Actors in the movie stores database
+            </summary>
+        </member>
+        <member name="M:Movie_store_API.Controllers.ActorsController.GetActorsAsync">
+            <summary>
+            Get list of all Actors
+            </summary>
+        </member>
+        <member name="M:Movie_store_API.Controllers.ActorsController.GetActor(System.Int32)">
+            <summary>
+            Get an Actor by Id
+            </summary>
+            <param name="id"></param>
+            <returns>Actor Record</returns>
+        </member>
+        <member name="M:Movie_store_API.Controllers.ActorsController.CreateActor(Movie_store_API.DTOs.CreateActorDTO)">
+            <summary>
+            Create a Actor Record
+            </summary>
+        </member>
+        <member name="M:Movie_store_API.Controllers.ActorsController.UpdateActor(System.Int32,Movie_store_API.DTOs.UpdateActorDto)">
+            <summary>
+            Update Actor Details
+            </summary>
+            <param name="id"></param>
+            <param name="actorDto"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
