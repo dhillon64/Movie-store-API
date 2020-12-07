@@ -16,6 +16,8 @@ namespace Movie_store_API.Mappings
             CreateMap<Actor, CreateActorDTO>().ReverseMap();
             CreateMap<Actor, UpdateActorDto>().ReverseMap();
             CreateMap<Movie, MovieDTO>().ReverseMap();
+            CreateMap<Movie, CreateMovieDTO>().ReverseMap();
+            CreateMap<Movie, UpdateActorDto>().ReverseMap();
 
         }
     }

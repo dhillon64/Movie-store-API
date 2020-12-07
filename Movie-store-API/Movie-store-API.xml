@@ -34,5 +34,45 @@
             <param name="actorDto"></param>
             <returns></returns>
         </member>
+        <member name="T:Movie_store_API.Controllers.MoviesController">
+            <summary>
+            EndPoint used to interact with the Movies in the movie stores database
+            </summary>
+        </member>
+        <member name="M:Movie_store_API.Controllers.MoviesController.GetAllMovies">
+            <summary>
+            Returns List of Movies
+            </summary>
+            <returns>List of Movies</returns>
+        </member>
+        <member name="M:Movie_store_API.Controllers.MoviesController.GetMovie(System.Int32)">
+            <summary>
+            Get A single Movie details
+            </summary>
+            <param name="id"></param>
+            <returns>A movie Record</returns>
+        </member>
+        <member name="M:Movie_store_API.Controllers.MoviesController.CreateMovie(Movie_store_API.DTOs.CreateMovieDTO)">
+            <summary>
+            Create Movie Record
+            </summary>
+            <param name="movieDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Movie_store_API.Controllers.MoviesController.UpdateMovie(System.Int32,Movie_store_API.DTOs.UpdateMovieDTO)">
+            <summary>
+            Update Movie Details
+            </summary>
+            <param name="id"></param>
+            <param name="MovieDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Movie_store_API.Controllers.MoviesController.DeleteMovie(System.Int32)">
+            <summary>
+            Delete Movie from database
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
