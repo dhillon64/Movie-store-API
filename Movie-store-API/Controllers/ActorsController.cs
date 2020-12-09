@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Movie_store_API.Contracts;
@@ -84,6 +85,7 @@ namespace Movie_store_API.Controllers
         /// Create a Actor Record
         /// </summary>
         [HttpPost]
+        [Authorize(Roles ="Administrator")] 
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -130,6 +132,7 @@ namespace Movie_store_API.Controllers
         /// <returns></returns>
 
         [HttpPatch("{id:int}")]
+        [Authorize(Roles = "Administrator")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -179,6 +182,7 @@ namespace Movie_store_API.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize(Roles = "Administrator")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]

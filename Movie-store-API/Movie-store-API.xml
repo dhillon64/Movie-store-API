@@ -74,5 +74,12 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Movie_store_API.Controllers.UsersController.Login(Movie_store_API.DTOs.UserDTO)">
+            <summary>
+            User Login Endpoint
+            </summary>
+            <param name="userDTO"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
